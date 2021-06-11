@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Log in</title>
+</head>
+<body>
+    <form method="post" action="user-login.php" id="login_form" class="form push-down">
+        <img src="images/logo.svg" alt="" class="logo">
+        <div class="recentRegisteredUser">
+            
+        </div>
+        <fieldset class="form__container">
+            <legend class="form__container--heading">Try start sharing you'll like it.</legend>
+            <input type="text"
+                name="user_id" 
+                id="user_id" 
+                class="form__text-field" 
+                placeholder="Enter Username or email."
+                maxlength="60"
+                data-message_field="#user_id-message_field">            
+            <span id="user_id-message_field" class="form__error-message">This is message</span>
+            <div class="form-group-element">
+                <input type="password"
+                name="user_password"
+                id="user_password"
+                class="form__text-field"
+                placeholder="Enter Password"
+                maxlength="60"
+                data-message_field="#user_password-message_field">
+                <button class="form-group-element__button" id="show-hide-button" data-for="#user_password">&#128065;</button>
+            </div>
+            <span id="user_password-message_field" class="form__error-message"></span>
+            <input type="submit" value="Log in" id="login-btn" name="login" class="form__button">
+            <small class="form__note"><a href="forgot-password.php">Forgot password</a></small>            
+
+        </fieldset>
+    </form>
+</body>
+</html>
+
+<script src="js/main.js"></script>
