@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="js/script.js"></script>
+    <title>Create account</title>
+</head>
+<body>
+    <form method="post" action="signup.php" id="form" class="form push-down">
+        <img src="images/logo.svg" alt="" class="logo">
+        <fieldset class="form__container">
+            <legend class="form__container--heading">Connect with share memories.</legend>
+            <input type="text"
+                name="user_name" 
+                id="user_name" 
+                class="form__text-field" 
+                placeholder="Enter Username"
+                maxlength="40"
+                data-message_field="#username-message_field">
+            <small class="form__note">e.g. user_name123</small>
+            <span id="username-message_field" class="form__error-message">This is message</span>
+            <input type="text"
+                name="email"
+                id="email"
+                class="form__text-field"
+                placeholder="Enter Email"
+                data-message_field="#email-message_field">
+            <small class="form__note">e.g. email@xyz.com</small>
+            <span id="email-message_field" class="form__error-message"></span>
+            <div class="form-group-element">
+                <input type="password"
+                name="password"
+                id="password"
+                class="form__text-field password-field"
+                placeholder="Enter Password"
+                maxlength="60"
+                data-message_field="#password-message_field">
+                <button class="form-group-element__button show_password_btn" id="show-hide-button" data-for="#password">&#128065;</button>
+            </div>
+            <small class="form__note">Password must have more than 10 letters.</small>
+            <span id="password-message_field" class="form__error-message"></span>
+            <input type="submit" value="Sign up" id="register" name="register" class="form__button">
+            <small class="form__note">Already have a account. <a href="login.html">Log in</a></small>            
+        </fieldset>
+    </form>
+</body>
+</html>
+
+<script>
+    Array.from(document.querySelectorAll('.show_password_btn')).forEach(showPasswordBtn => {
+        showPasswordBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            showPassword(showPasswordBtn)
+        })
+    })
+</script>

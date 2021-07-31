@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/profile.css"> -->
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/post.css">
+    <link rel="stylesheet" type="text/css" href="css/profile.css">
+    <style>
+        .users-section{
+            width: 20vw;
+            background-color: #fff;
+            margin: .5em auto;
+            padding: .7em;
+            display: flex;
+            flex-direction: column;
+        }
+        .user-div{
+            width: 100%;
+            margin: .2em;
+            display: inline-flex;
+        }
+        .user-div__link{
+            text-decoration: none;
+        }
+        .username{
+            font-weight: 500;
+        }
+        .follow-btn{
+            padding: .7em;
+            background-color: #2e2eff;
+            color: #fff;
+            border: none;
+            font-weight: 500;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="users-section">
+        <div class="user-div">
+        <form method="post" action="">
+           <a href="#" class="user-div__link"><strong class="username">guywithsimplegesture</strong></a>
+           <input type="submit" name="follow_user" value="Follow" class="follow-btn"> 
+        </form>            
+        </div>         
+    </section>
+</body>
+</html>
